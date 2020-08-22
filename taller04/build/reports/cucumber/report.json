@@ -1,0 +1,243 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Como usuario comun",
+        "description": "Quiero crear un item\r\nPara monitoriar mis tareas",
+        "id": "item-api---clean;como-usuario-comun",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5983813492,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I have token ready to use in Todo.ly",
+            "match": {
+              "location": "MyStepdefsClean.iHaveTokenReadyToUseInTodoLy()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1455730404,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I send a POST request https://todo.ly/api/items.json with json body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://todo.ly/api/items.json",
+                  "offset": 22
+                }
+              ],
+              "location": "MyStepdefsClean.iSendAPOSTRequestHttpsTodoLyApiItemsJsonWithJsonBody(String,String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 9,
+              "value": "{\r\n  \"Content\" : \"NEW ITEM04\",\r\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 100054706,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I expected the response code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "MyStepdefsClean.iExpectedTheResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19617913,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I expected the jsonBody",
+            "match": {
+              "location": "MyStepdefsClean.iExpectedTheJsonBody(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 16,
+              "value": "{\r\n\"Id\": IGNORE,\r\n\"Content\": \"NEW ITEM04\",\r\n\"ItemType\": 1,\r\n\"Checked\": false,\r\n\"ProjectId\": null,\r\n\"ParentId\": null,\r\n\"Path\": \"\",\r\n\"Collapsed\": false,\r\n\"DateString\": null,\r\n\"DateStringPriority\": 0,\r\n\"DueDate\": \"\",\r\n\"Recurrence\": null,\r\n\"ItemOrder\": null,\r\n\"Priority\": 4,\r\n\"LastSyncedDateTime\": \"IGNORE\",\r\n\"Children\": [\r\n\r\n],\r\n\"DueDateTime\": null,\r\n\"CreatedDate\": \"IGNORE\",\r\n\"LastCheckedDate\": null,\r\n\"LastUpdatedDate\": \"IGNORE\",\r\n\"Deleted\": false,\r\n\"Notes\": \"\",\r\n\"InHistory\": false,\r\n\"SyncClientCreationId\": null,\r\n\"DueTimeSpecified\": true,\r\n\"OwnerId\": 665898\r\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 44629693,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "I get the value the attribute Id and save in ID_ITEM",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Id",
+                  "offset": 30
+                },
+                {
+                  "val": "ID_ITEM",
+                  "offset": 45
+                }
+              ],
+              "location": "MyStepdefsClean.iGetTheValueTheAttributeIdAndSaveInID_ITEM(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1216010788,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "I send a PUT request https://todo.ly/api/items/ID_ITEM.JSON with json body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "PUT",
+                  "offset": 9
+                },
+                {
+                  "val": "https://todo.ly/api/items/ID_ITEM.JSON",
+                  "offset": 21
+                }
+              ],
+              "location": "MyStepdefsClean.iSendAPUTRequestHttpsTodoLyApiItemsID_ITEMJSONWithJsonBody(String,String,String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 50,
+              "value": "{\r\n  \"Content\" : \"ITEM UPDATE\"\r\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 1037900,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I expected the response code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "MyStepdefsClean.iExpectedTheResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10461995,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I expected the jsonBody",
+            "match": {
+              "location": "MyStepdefsClean.iExpectedTheJsonBody(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 57,
+              "value": "{\r\n\"Id\": IGNORE,\r\n\"Content\": \"ITEM UPDATE\",\r\n\"ItemType\": 1,\r\n\"Checked\": false,\r\n\"ProjectId\": null,\r\n\"ParentId\": null,\r\n\"Path\": \"\",\r\n\"Collapsed\": false,\r\n\"DateString\": null,\r\n\"DateStringPriority\": 0,\r\n\"DueDate\": \"\",\r\n\"Recurrence\": null,\r\n\"ItemOrder\": null,\r\n\"Priority\": 4,\r\n\"LastSyncedDateTime\": \"IGNORE\",\r\n\"Children\": [\r\n\r\n],\r\n\"DueDateTime\": null,\r\n\"CreatedDate\": \"IGNORE\",\r\n\"LastCheckedDate\": null,\r\n\"LastUpdatedDate\": \"IGNORE\",\r\n\"Deleted\": false,\r\n\"Notes\": \"\",\r\n\"InHistory\": false,\r\n\"SyncClientCreationId\": null,\r\n\"DueTimeSpecified\": true,\r\n\"OwnerId\": 665898\r\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 41342416,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "I get the value the attribute Id and save in ID_DELETE",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Id",
+                  "offset": 30
+                },
+                {
+                  "val": "ID_DELETE",
+                  "offset": 45
+                }
+              ],
+              "location": "MyStepdefsClean.iGetTheValueTheAttributeIdAndSaveInID_ITEM(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1146373776,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "I send a DELETE request https://todo.ly/api/items/ID_DELETE.JSON with json body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DELETE",
+                  "offset": 9
+                },
+                {
+                  "val": "https://todo.ly/api/items/ID_DELETE.JSON",
+                  "offset": 24
+                }
+              ],
+              "location": "MyStepdefsClean.iSendAPUTRequestHttpsTodoLyApiItemsID_ITEMJSONWithJsonBody(String,String,String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 91,
+              "value": ""
+            }
+          },
+          {
+            "result": {
+              "duration": 753214,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "I expected the response code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "MyStepdefsClean.iExpectedTheResponseCode(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "ITEM API - Clean",
+    "description": "",
+    "id": "item-api---clean",
+    "keyword": "Feature",
+    "uri": "MyStepdefsClean.feature"
+  }
+]

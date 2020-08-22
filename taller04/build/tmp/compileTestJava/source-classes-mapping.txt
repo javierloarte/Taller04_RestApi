@@ -1,0 +1,26 @@
+clienAPI/RequestPATCH.java
+ clienAPI.RequestPATCH
+runner/MyStepdefsClean.java
+ runner.MyStepdefsClean
+clienAPI/RequestPUT.java
+ clienAPI.RequestPUT
+helpers/JsonHelper.java
+ helpers.JsonHelper
+configuration/Constantes.java
+ configuration.Constantes
+clienAPI/RequestPOST.java
+ clienAPI.RequestPOST
+runner/Runner.java
+ runner.Runner
+clienAPI/FactoryRequest.java
+ clienAPI.FactoryRequest
+clienAPI/HttpRequest.java
+ clienAPI.HttpRequest
+clienAPI/RequestInformation.java
+ clienAPI.RequestInformation
+clienAPI/RequestGET.java
+ clienAPI.RequestGET
+clienAPI/RequestDELETE.java
+ clienAPI.RequestDELETE
+helpers/ReportHtml.java
+ helpers.ReportHtml
